@@ -1,0 +1,72 @@
+<odoo>
+    <data>
+        <template id="test.digizilla_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.basic_layout">
+                        <div class="page">
+                            <div class="row">
+                                <div class="d-flex justify-content-between">
+                                    <span class="text-danger"><strong>Digizilla Report</strong></span>
+                                </div>
+                            </div>
+
+                            <table class="table borderless" style="height:100px;">
+                                <tr class="text-center">
+                                    <td class=" mr-2 text-center">
+                                        Name:
+                                        <span t-field="o.name"/>
+                                    </td>
+                                    <td class=" mr-2 text-center">
+                                        country:
+                                        <span t-field="o.country"/>
+                                    </td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td class=" mr-2 text-center">
+                                        gender:
+                                        <span t-field="o.gender"/>
+                                    </td>
+                                    <td class=" mr-2 text-center">
+                                        tags:
+                                        <span t-field="o.tags"/>
+                                    </td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td class=" mr-2 text-center">
+                                        Customers:
+                                        <span t-field="o.customers_ids"/>
+                                    </td>
+                                    <td class=" mr-2 text-center">
+                                        Company:
+                                        <span t-field="o.company_id"/>
+                                    </td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td class=" mr-2 text-center">
+                                        notes:
+                                        <span t-field="o.notes"/>
+                                    </td>
+                                    <td class=" mr-2 text-center">
+                                        comments:
+                                        <span t-field="o.comments"/>
+                                    </td>
+                                </tr>
+
+
+                            </table>
+                            <div>
+                                <center>
+                                    <strong>
+                                        joining date : <span t-field="o.joining_date"/>
+                                    </strong>
+                                </center>
+
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>
